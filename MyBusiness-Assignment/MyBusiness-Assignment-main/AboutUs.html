@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About Us</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@splidejs/splide@3.0.9/dist/css/splide.min.css"
+    />
+
+    <style>
+      /* Set the style for the sidebar division */
+      #sidebar {
+        background-color: #889eac;
+        float: right;
+        width: 15%;
+        height: 600px;
+        padding: 20px;
+      }
+
+      /* Set the style for the sidebar links */
+      #sidebar div {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        cursor: pointer;
+      }
+
+      /* Set the style for the active sidebar link */
+      #sidebar div.active {
+        background-color: white;
+        color: #fff;
+      }
+
+      /* Change the background color on hover */
+      #sidebar div:not(.active):hover {
+        background-color: #ddd;
+      }
+
+      /* Set the style for the main content */
+      .main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      /* Set the style for the menu bar */
+      #menu {
+        background-color: #1d3354;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      /* Set the style for the menu links */
+      #menu a {
+        display: inline-block;
+        color: black;
+        justify-content: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Set the style for the active menu link */
+      #menu a.active {
+        background-color: #467599;
+      }
+
+      /* Change color on hover */
+      #menu a:hover {
+        background-color: #467599;
+        color: black;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      button:hover {
+        background-color: #3e8e41;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+      }
+
+      .splide__slide {
+        background-color: #eee;
+        padding: 1rem;
+        text-align: center;
+      }
+    </style>
+    <script>
+      function updateTime() {
+        // Get the current date and time
+        let now = new Date();
+
+        // Extract the hours, minutes, and seconds
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+
+        // Add leading zeros to the minutes and seconds if needed
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+          seconds = "0" + seconds;
+        }
+
+        // Display the time in the "time" element
+        document.getElementById("time").innerHTML =
+          hours + ":" + minutes + ":" + seconds;
+
+        // Call this function again in one second
+        setTimeout(updateTime, 1000);
+      }
+
+      // Call the updateTime function when the page is loaded
+      window.onload = updateTime;
+    </script>
+
+    <div id="menu" style="font-family: Tahoma; color: white">
+      <h3 align="right">
+        <span style="float: left; font-size: 40px">SCOREBOARD</span>
+        <a href="Homepage.html" style="font-family: Tahoma; color: white"
+          >Home</a
+        >
+        <a href="#" class="active" style="font-family: Tahoma; color: white"
+          >About</a
+        >
+        <a href="Services.html" style="font-family: Tahoma; color: white"
+          >Services</a
+        >
+      </h3>
+    </div>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div class="active">
+        <h3 style="font-family: fantasy; color: black">
+          Current Time:
+          <span id="time" style="font-family: fantasy; color: black"></span>
+        </h3>
+      </div>
+      <div style="border: 2px solid white">
+        <h3 style="font-family: fantasy">Contact Us !</h3>
+        <p style="font-family: candara; color: black">
+          <img
+            src="gmail.svg"
+            alt="icon"
+            style="width: 20px; height: 20px; vertical-align: middle"
+          />
+          Email : afiqfahmi@graduate.utm.my
+        </p>
+        <p style="font-family: candara; color: black">
+          <img
+            src="phone.svg"
+            alt="icon"
+            style="width: 20px; height: 20px; vertical-align: middle"
+          />
+          Phone Number : 0124721595
+        </p>
+      </div>
+      <div style="border: 2px solid white">
+        <h3 style="font-family: fantasy">Our Social Media</h3>
+        <a
+          href="http://www.facebook.com"
+          style="font-family: candara; color: black"
+          ><img
+            src="facebook.svg"
+            alt="icon"
+            style="width: 20px; height: 20px; vertical-align: middle" />
+          Facebook<br
+        /></a>
+        <a
+          href="http://www.instagram.com"
+          style="font-family: candara; color: black"
+          ><img
+            src="instagram.svg"
+            alt="icon"
+            style="width: 20px; height: 20px; vertical-align: middle" />
+          Instagram<br /><br
+        /></a>
+      </div>
+      <div style="border: 2px solid white">
+        <h3 style="font-family: fantasy">Created By :</h3>
+        <p style="font-family: candara; color: black">Afiq Fahmi Bin Roslan</p>
+        <p style="font-family: candara; color: black">A21EC0153</p>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="maxresdefault.jpg" alt="Image 1" />
+            </li>
+            <li class="splide__slide">
+              <img src="JerseyStore.jpg" alt="Image 1" />
+            </li>
+            <li class="splide__slide">
+              <img src="AboutUs4.jpg" alt="Image 1" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <script src="https://unpkg.com/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+
+      <script>
+        var splide = new Splide(".splide", {
+          type: "loop",
+          perPage: 3,
+          perMove: 1,
+        });
+
+        splide.mount();
+      </script>
+      <h2 style="font-family: fantasy" align="center">About Us</h2>
+      <h4
+        style="
+          font-family: candara;
+          text-align: center;
+          width: 70%;
+          margin: 0 auto;
+        "
+      >
+        SCOREBOARD sports was founded in 2010 by a group of sports enthusiasts
+        who recognized a need for high-quality, affordable sports jerseys. The
+        founders had a passion for sports and a desire to provide athletes and
+        fans with a better experience when it came to their sports apparel. They
+        started the business from scratch, designing and producing their first
+        jerseys in a small workshop. Over time, they built a reputation for
+        delivering exceptional quality and service, and the business grew
+        rapidly. Today, SCOREBOARD is one of the leading providers of sports
+        jerseys in the region, serving thousands of customers every year. We are
+        proud of our origins and continue to uphold the same principles of
+        quality, affordability, and customer service that drove our founders to
+        start this business in the first place.
+      </h4>
+      <br /><br />
+
+      <h2 style="font-family: fantasy" align="center">Our Crew</h2>
+      <h4
+        style="
+          font-family: candara;
+          text-align: center;
+          width: 70%;
+          margin: 0 auto;
+        "
+      >
+        At SCOREBOARD Sports, we believe that our success is driven by our
+        talented and dedicated team of professionals. We currently employ a team
+        of 20 staff members, including designers, production personnel, customer
+        service representatives, and administrative staff. Each member of our
+        team brings a unique set of skills and experience to the table, and we
+        are committed to providing them with a supportive work environment that
+        fosters growth and development. Our team members are passionate about
+        sports and take pride in delivering high-quality products and
+        exceptional customer service. We believe that investing in our staff is
+        the key to our continued success, and we are always looking for ways to
+        improve our training programs and enhance our employees' skills.
+      </h4>
+    </div>
+  </body>
+</html>

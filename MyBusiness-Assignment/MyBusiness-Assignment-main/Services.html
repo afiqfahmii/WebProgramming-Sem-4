@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Services</title>
+    <style>
+      /* Set the style for the sidebar division */
+      #sidebar {
+        background-color: #889eac;
+        float: right;
+        width: 15%;
+        height: 600px;
+        padding: 20px;
+      }
+
+      /* Set the style for the sidebar links */
+      #sidebar div {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        cursor: pointer;
+      }
+
+      /* Set the style for the active sidebar link */
+      #sidebar div.active {
+        background-color: white;
+        color: #fff;
+      }
+
+      /* Change the background color on hover */
+      #sidebar div:not(.active):hover {
+        background-color: #ddd;
+      }
+
+      /* Set the style for the main content */
+      .main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      /* Set the style for the menu bar */
+      #menu {
+        background-color: #1d3354;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      /* Set the style for the menu links */
+      #menu a {
+        display: inline-block;
+        color: black;
+        justify-content: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Set the style for the active menu link */
+      #menu a.active {
+        background-color: #467599;
+      }
+
+      /* Change color on hover */
+      #menu a:hover {
+        background-color: #467599;
+        color: black;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+      }
+    </style>
+    <script>
+      function updateTime() {
+        // Get the current date and time
+        let now = new Date();
+
+        // Extract the hours, minutes, and seconds
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+
+        // Add leading zeros to the minutes and seconds if needed
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+          seconds = "0" + seconds;
+        }
+
+        // Display the time in the "time" element
+        document.getElementById("time").innerHTML =
+          hours + ":" + minutes + ":" + seconds;
+
+        // Call this function again in one second
+        setTimeout(updateTime, 1000);
+      }
+
+      // Call the updateTime function when the page is loaded
+      window.onload = updateTime;
+    </script>
+    <div id="menu" style="font-family: Tahoma; color: white">
+      <h3 align="right">
+        <span style="float: left; font-size: 40px">SCOREBOARD</span>
+        <a href="Homepage.html" style="font-family: Tahoma; color: white"
+          >Home</a
+        >
+        <a href="AboutUs.html" style="font-family: Tahoma; color: white"
+          >About</a
+        >
+        <a href="#" class="active" style="font-family: Tahoma; color: white"
+          >Services</a
+        >
+      </h3>
+    </div>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div class="active">
+        <h3 style="font-family: fantasy; color: black">
+          Current Time:
+          <span id="time" style="font-family: fantasy; color: black"></span>
+        </h3>
+      </div>
+      <div style="border: 2px solid white">
+        <h3 style="font-family: fantasy">Contact Us !</h3>
+        <p style="font-family: candara; color: black">
+          <img
+            src="gmail.svg"
+            alt="icon"
+            style="width: 20px; height: 20px; vertical-align: middle"
+          />
+          Email : afiqfahmi@graduate.utm.my
+        </p>
+        <p style="font-family: candara; color: black">
+          <img
+            src="phone.svg"
+            alt="icon"
+            style="width: 20px; height: 20px; vertical-align: middle"
+          />
+          Phone Number : 0124721595
+        </p>
+      </div>
+      <div style="border: 2px solid white">
+        <h3 style="font-family: fantasy">Our Social Media</h3>
+        <a
+          href="http://www.facebook.com"
+          style="font-family: candara; color: black"
+          ><img
+            src="facebook.svg"
+            alt="icon"
+            style="width: 20px; height: 20px; vertical-align: middle" />
+          Facebook<br
+        /></a>
+        <a
+          href="http://www.instagram.com"
+          style="font-family: candara; color: black"
+          ><img
+            src="instagram.svg"
+            alt="icon"
+            style="width: 20px; height: 20px; vertical-align: middle" />
+          Instagram<br /><br
+        /></a>
+      </div>
+      <div style="border: 2px solid white">
+        <h3 style="font-family: fantasy">Created By :</h3>
+        <p style="font-family: candara; color: black">Afiq Fahmi Bin Roslan</p>
+        <p style="font-family: candara; color: black">A21EC0153</p>
+      </div>
+    </div>
+
+    <div class="main">
+      <table style="width: 100%">
+        <tr>
+          <br />
+        </tr>
+        <tr>
+          <td style="width: 30%">
+            <img src="sublimation2.jpeg" />
+          </td>
+          <td>
+            <h2 style="font-family: fantasy">WE DO SCREEN PRINTING</h2>
+            <h4 style="font-family: candara; width: 90%" align="justify">
+              At SCOREBOARD Sports, we offer top-notch screen printing services
+              to our customers. Our screen printing service is a perfect choice
+              for those who are looking for high-quality and durable prints on
+              their sports jerseys and other apparel. We utilize the latest
+              screen printing technology and techniques to produce stunning and
+              long-lasting prints that stand out.Our team of experienced
+              designers works closely with customers to create custom designs
+              that reflect their unique style and preferences. We have a wide
+              range of colors and inks to choose from, so customers can get
+              creative with their designs. Our state-of-the-art printing
+              equipment ensures that each print is precise and vibrant, with no
+              smudging or bleeding.
+            </h4>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 30%"><img src="Emroidery.png" /></td>
+          <td>
+            <h2 style="font-family: fantasy">WE DO EMBROIDERY</h2>
+            <h4 style="font-family: candara; width: 90%" align="justify">
+              At SCOREBOARD Sports, we offer top-quality screen embroidery
+              services to our customers. Screen embroidery is a technique that
+              involves stitching a design onto a garment using a specialized
+              embroidery machine. This technique creates a highly professional
+              and durable finish that is perfect for sports jerseys and other
+              apparel.
+            </h4>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 30%">
+            <img src="model2.jpeg" />
+          </td>
+          <td>
+            <h2 style="font-family: fantasy">WE SELL FOOTBALL CLUB JERSEY</h2>
+            <h4 style="font-family: candara; width: 90%" align="justify">
+              Our jerseys are made from premium materials that are designed to
+              last, so you can wear them game after game without worrying about
+              wear and tear. Each jersey features the official colors and logos
+              of your favorite club, so you can show your support in style.
+            </h4>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

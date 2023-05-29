@@ -1,0 +1,235 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>HomePage</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@splidejs/splide@3.0.9/dist/css/splide.min.css"
+    />
+    <style>
+      /* Set the style for the sidebar division */
+      #sidebar {
+        background-color: #889eac;
+        float: right;
+        width: 15%;
+        height: 600px;
+        padding: 20px;
+      }
+
+      /* Set the style for the sidebar links */
+      #sidebar div {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        cursor: pointer;
+      }
+
+      /* Set the style for the active sidebar link */
+      #sidebar div.active {
+        background-color: white;
+        color: #fff;
+      }
+
+      /* Change the background color on hover */
+      #sidebar div:not(.active):hover {
+        background-color: #ddd;
+      }
+
+      /* Set the style for the main content */
+      .main {
+        width: 80%;
+        margin-right: 35%;
+        padding: 20px;
+      }
+
+      /* Set the style for the menu bar */
+      #menu {
+        background-color: #1d3354;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      /* Set the style for the menu links */
+      #menu a {
+        display: inline-block;
+        color: black;
+        justify-content: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Set the style for the active menu link */
+      #menu a.active {
+        background-color: #467599;
+      }
+
+      /* Change color on hover */
+      #menu a:hover {
+        background-color: #467599;
+        color: black;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .splide__slide {
+        background-color: #eee;
+        padding: 1rem;
+        text-align: center;
+      }
+    </style>
+    <script>
+      function updateTime() {
+        // Get the current date and time
+        let now = new Date();
+
+        // Extract the hours, minutes, and seconds
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+
+        // Add leading zeros to the minutes and seconds if needed
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+          seconds = "0" + seconds;
+        }
+
+        // Display the time in the "time" element
+        document.getElementById("time").innerHTML =
+          hours + ":" + minutes + ":" + seconds;
+
+        // Call this function again in one second
+        setTimeout(updateTime, 1000);
+      }
+
+      // Call the updateTime function when the page is loaded
+      window.onload = updateTime;
+    </script>
+    <div id="menu">
+      <h3 align="right">
+        <span
+          style="
+            font-family: Tahoma;
+            float: left;
+            font-size: 40px;
+            color: white;
+          "
+          >SCOREBOARD</span
+        >
+        <a href="#" class="active" style="font-family: Tahoma; color: white"
+          >Home</a
+        >
+        <a href="AboutUs.html" style="font-family: Tahoma; color: white"
+          >About</a
+        >
+        <a href="Services.html" style="font-family: Tahoma; color: white"
+          >Services</a
+        >
+      </h3>
+    </div>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div class="active">
+        <h3 style="font-family: fantasy; color: black">
+          Current Time:
+          <span id="time" style="font-family: fantasy; color: black"></span>
+        </h3>
+      </div>
+      <div style="border: 2px solid white">
+        <h3 style="font-family: fantasy">Contact Us !</h3>
+        <p style="font-family: candara; color: black">
+          <img
+            src="gmail.svg"
+            alt="icon"
+            style="width: 20px; height: 20px; vertical-align: middle"
+          />
+          Email : afiqfahmi@graduate.utm.my
+        </p>
+        <p style="font-family: candara; color: black">
+          <img
+            src="phone.svg"
+            alt="icon"
+            style="width: 20px; height: 20px; vertical-align: middle"
+          />
+          Phone Number : 0124721595
+        </p>
+      </div>
+      <div style="border: 2px solid white">
+        <h3 style="font-family: fantasy">Our Social Media</h3>
+        <a
+          href="http://www.facebook.com"
+          style="font-family: candara; color: black"
+          ><img
+            src="facebook.svg"
+            alt="icon"
+            style="width: 20px; height: 20px; vertical-align: middle" />
+          Facebook<br
+        /></a>
+        <a
+          href="http://www.instagram.com"
+          style="font-family: candara; color: black"
+          ><img
+            src="instagram.svg"
+            alt="icon"
+            style="width: 20px; height: 20px; vertical-align: middle" />
+          Instagram<br /><br
+        /></a>
+      </div>
+      <div style="border: 2px solid white">
+        <h3 style="font-family: fantasy">Created By :</h3>
+        <p style="font-family: candara; color: black">Afiq Fahmi Bin Roslan</p>
+        <p style="font-family: candara; color: black">A21EC0153</p>
+      </div>
+    </div>
+
+    <div class="main">
+      <img src="Banner.png" alt="Banner" style="width: 1500px; height: 300px" />
+      <h2 style="font-family: fantasy; color: black" ; align="justify">
+        "Upgrade your game with our premium quality jerseys - designed for
+        comfort, style, and performance. Shop now and experience the difference!"
+      </h2>
+      <h3 style="font-family: candara; color: black" ; align="justify">
+        Welcome to our jersey store! We offer a wide variety of high-quality
+        jerseys designed to meet your every need. Whether you're a sports
+        enthusiast, athlete, or simply looking for comfortable and stylish
+        everyday wear, we have the perfect jersey for you. Our jerseys are made
+        from the finest materials to ensure maximum comfort, breathability, and
+        durability. We pride ourselves on providing our customers with the best
+        possible experience - from the quality of our products to the efficiency
+        of our customer service. Browse our collection today and elevate your
+        style and performance to the next level.
+      </h3>
+      <h2 style="font-family: fantasy; width: 100%" align="center">
+        Check Out Our New Arrivals !
+      </h2>
+      <div class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide"><img src="jersey.jpg" /></li>
+            <li class="splide__slide"><img src="jersey2.jpg" /></li>
+            <li class="splide__slide"><img src="jersey3.jpg" /></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+
+    <script>
+      var splide = new Splide(".splide", {
+        type: "loop",
+        perPage: 3,
+        perMove: 1,
+      });
+
+      splide.mount();
+    </script>
+
+  </body>
+</html>
+
