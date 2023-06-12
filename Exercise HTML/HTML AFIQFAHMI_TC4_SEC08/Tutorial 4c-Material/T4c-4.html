@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>JS event handler</title>
+  </head>
+
+  <body>
+    <h2>Employment Application</h2>
+    <form name="frmEmployees">
+      <table border="0" width="288">
+        <tr>
+          <td width="80">First Name:</td>
+          <td width="194">
+            <input
+              type="text"
+              name="txtFirstName"
+              size="20"
+              onchange="form.txtFullName.value = form.txtFirstName.value+' '+form.txtLastName.value"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td width="80">Last Name:</td>
+          <td width="194">
+            <input
+              type="text"
+              name="txtLastName"
+              size="10"
+              onChange="form.txtFullName.value = form.txtFirstName.value + ' ' + form.txtLastName.value"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td width="80">Full Name:</td>
+          <td width="194">
+            <input type="text" name="txtFullName" size="20" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

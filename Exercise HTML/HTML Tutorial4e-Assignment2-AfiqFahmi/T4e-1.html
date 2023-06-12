@@ -1,0 +1,54 @@
+<html>
+ <head><title>Arrays</title></head>
+ <body>
+  <table border="1" cellspacing="0">
+    <tr align="center">
+       <th>Product's Name</th> <th>Unit Price <br>(RM)</th> <th> Quatity</th> <th> Price <br> (RM)</th>
+     </tr>
+
+    <script language="Javascript">
+      var products= new Array("Speaker","Head Phone","Keyboard","Mouse");
+      var prices= [7,15,12,30,10];
+      var qty=[10,30,25,8,7];
+
+      var qty_count=0;
+      var total_unitprice=0;
+      var total_price=0;
+
+      for(var i=0;i<products.length;i++) {
+         total_unitprice+=prices[i];
+         qty_count+=qty[i];
+         sum=prices[i]*qty[i];
+         total_price+=sum;
+         
+         
+
+         document.writeln("<tr align='right'>");
+         document.writeln("<td align='left'>", products[i],"</td>","<td>", prices[i], "</td>" );
+         document.writeln("<td>", qty[i], "</td>");
+         document.writeln("<td>", sum, "</td>");
+         document.writeln("</tr>");
+      }
+
+    
+
+
+    </script>
+
+       <tr align="right">
+          <th colspan="2" align="right">Total </th>
+          <td> <script language="javascript">document.write(qty_count) </script> </td>
+          <td> <script language="javascript">document.write(total_price) </script> </td>
+       </tr>
+  </table>
+
+  <br>
+  The average of Unit Price: <b><font color="red">
+   <script language="javascript">
+      document.writeln(total_unitprice/prices.length)
+   </script>
+  </font></b>
+
+
+  </body>
+</html>
